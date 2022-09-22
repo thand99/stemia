@@ -1,0 +1,47 @@
+.home
+{
+    background-image: url('\src\assets\img\yes.jpg');
+    height:800px;
+    background-position:0px;
+    background-size:cover;
+    background-position-y:35%;
+    margin-top: -3rem!important;
+}
+.allContainer
+{
+    background-color: aliceblue;
+    padding: 1px;
+}
+.container h1
+{
+    font-style:italic;
+    font-size: 50px;
+    
+}
+.sbBox img
+{
+    width: 50%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 30px;
+    margin-top: 15px;
+}
+.sbBox h1
+{
+    text-align: center;
+    margin-top: 20px;
+}
+.sbBox p
+{
+    margin-top: 20px;
+    text-align: center;
+}
+.sbbtn
+{
+    color: black;
+    background-color: var(--primary-color);
+    padding: 10px 10px;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 5px;
+}

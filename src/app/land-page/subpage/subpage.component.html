@@ -1,0 +1,20 @@
+<div class="page">
+    
+    <a routerLink="../../lhome" class="btn btn-sm btn-dark mb-3"><span style="color:aliceblue ;">Back</span></a>
+    <div class="row">
+        <div class="col-lg-3" *ngFor="let s of subData">
+            
+            <h1 class="text-center">{{subData[0].subName}}</h1>
+            <img src="{{subData[0].subImg2}}" alt="" width="90%" height="50%">
+            <br><br>
+            <p>{{subData[0].subDetails}}</p>
+            
+        </div>
+
+        <div class="col-lg-6">
+            <h1>Subject</h1>
+            <p> <a href="{{subData[0].subLink}} ">{{subData[0].subject}}</a></p>
+            <p><a  href="{{subData[0].subLink2}} ">{{subData[0].subject2}}</a></p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+.home{
+    background-image:url('\src\assets\img\Tech backgroung.jpg') ;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 2;
+}
+.display-1{
+    color: var(--dark);
+    font-weight: 700;
+}

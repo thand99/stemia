@@ -1,0 +1,62 @@
+<nav class="navbar" style="background-color:rgb(0, 0, 0); height: 130px;" *ngIf="isLoggedIn$ | async as isLoggedIn">
+    <a class="navbar-brand" href="#">
+      <img src="/assets/img/new logo.jpeg" alt="" width="250" height="115">
+    </a>
+ <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+
+      <li class="nav-link px-2 ">
+        <a class="nav-link link-light" 
+          routerLink="/lhome"
+          routerLinkActive="active"
+          >HOME</a>
+      </li>
+
+      <li class="nav-link px-2 ">
+        <a class="nav-link link-light" 
+        routerLink="/competition" 
+        routerLinkActive="active">Competition</a>
+      </li>
+
+      <li class="nav-link px-2 ">
+        <a class="nav-link link-light" 
+        routerLink="/calender"
+        routerLinkActive="active">Calender</a>
+      </li>
+ </ul>
+ <div class="col-md-3 text-end">
+    <button type="button" 
+    class="btn btn-primary me-2" 
+    routerLink="/home-page" 
+    style="color: rgb(255, 255, 255);"
+    (click)="onLogout()" *ngIf="isLoggedIn"> Logout</button>
+  </div>
+ </nav>
+ <nav class="navbar" style="background-color:rgb(0, 0, 0); height: 130px;" *ngIf="!(isLoggedIn$ | async) as isLoggedIn">
+  <a class="navbar-brand" href="#">
+    <img src="/assets/img/new logo.jpeg" alt="" width="250" height="115">
+  </a>
+<ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+
+    <li class="nav-link px-2 ">
+      <a class="nav-link link-light" 
+        routerLink="/home-page"
+        routerLinkActive="active"
+        >HOME</a>
+    </li>
+
+    <li class="nav-link px-2 ">
+      <a class="nav-link link-light" 
+      routerLink="/about-us" 
+      routerLinkActive="active">ABOUT</a>
+    </li>
+
+    <li class="nav-link px-2 ">
+      <a class="nav-link link-light" 
+      routerLink="/contact-us"
+      routerLinkActive="active">CONTACT</a>
+    </li>
+</ul>
+<div class="col-md-3 text-end">
+  <button type="button" class="btn btn-primary me-2" routerLink="/login" style="color: rgb(255, 255, 255);"> Login</button>
+</div>
+</nav>

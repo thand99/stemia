@@ -1,0 +1,10 @@
+.active{
+    background: rgb(0, 110, 255);
+}
+.btn{
+    background-color: rgb(255, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    display: inline-block;
+
+}

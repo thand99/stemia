@@ -1,0 +1,31 @@
+<div class="allContainer">
+    <div class="home">
+        <h1> </h1>
+    
+    </div>
+    <br>
+    <div class="container">
+        <h1 class="text-center"><span style="color:rgb(43, 6, 247);"> Select your fovorite subject</span></h1>
+        
+    </div>
+    <div class="container mt-5 mb-5" >
+
+        <div class="row">
+            <div class="col-lg-6" *ngFor="let sb of subData">
+
+                <div class="text-center">
+
+                    <div class="sbBox">
+                        <h1><span style="color:rgb(18, 7, 112) ;">{{sb.subName}}</span></h1>
+                        <img src="{{sb.subImg}}" alt="">
+                        <p>{{sb.subDetails2}}</p>
+                        <a class="sbbtn" [routerLink]="['/lhome',sb.id]">Click Here</a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

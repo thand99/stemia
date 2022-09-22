@@ -1,0 +1,10 @@
+.home{
+    background-image:url('\src\assets\img\study img.jpg') ;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}

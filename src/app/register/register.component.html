@@ -1,0 +1,112 @@
+<div class="home vh-100">
+    <section id="section">
+        <div class="col-lg-100 mb-5 mb-lg-0 position-obsolute">
+            <div class="login-wrapper">
+                <div class="card">
+                    <div class="card-body">
+                        <form [formGroup]="registerForm" class="form-signin">
+                            <div class="mb-3">
+                                <h1 class="h3 mb-3 font-weight-normal" style="text-align: center;">Register</h1>
+
+                                <label for="inputFullName1" class="form-label">Full name</label>
+                                <input type="text" class="form-control" formControlName="fullName" required autofocus>
+                            </div>
+
+                            <div class="col-md-8">
+                                <div *ngIf="fullName.touched && fullName.errors" class="errorMessage">
+                                    <span *ngIf="fullName.hasError('required')" style="color: red;"> Full name is
+                                        required.</span>
+                                    <span *ngIf="fullName.hasError('maxlength')" style="color: red;"> Only 25 characters
+                                        allowed for full name.</span>
+                                    <span *ngIf="fullName.hasError('minlength')" style="color: red;"> Atleast 5
+                                        characters needed for full name.</span>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="inputEmail1" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" formControlName="email"
+                                    aria-describedby="emailHelp" required autofocus>
+                            </div>
+
+                            <div class="col-md-8">
+                                <div *ngIf="email.touched && email.errors" class="errorMessage">
+                                    <span *ngIf="email.hasError('required')" style="color: red;"> Email is
+                                        required.</span>
+                                    <span *ngIf="email.hasError('email')" style="color: red;"> Please provide valid
+                                        email.</span>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="inputAge1" class="form-label">Age</label>
+                                <input type="number" class="form-control" formControlName="age" required autofocus>
+                            </div>
+
+                            <div class="col-md-8">
+                                <div *ngIf="age.touched && age.errors" class="errorMessage">
+                                    <span *ngIf="age.hasError('required')" style="color: red;"> Age is required.</span>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="inputSchool1" class="form-label">School</label>
+                                <input type="text" class="form-control" formControlName="school" required autofocus>
+                            </div>
+
+                            <div class="col-md-8">
+                                <div *ngIf="school.touched && school.errors" class="errorMessage">
+                                    <span *ngIf="school.hasError('required')" style="color: red;"> School is
+                                        required.</span>
+                                    <span *ngIf="school.hasError('maxlength')" style="color: red;"> Only 50 characters
+                                        allowed for school.</span>
+                                    <span *ngIf="school.hasError('minlength')" style="color: red;"> Atleast 5 characters
+                                        needed for school.</span>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                    formControlName="password" required>
+                            </div>
+
+                            <div class="col-md-8">
+                                <div *ngIf="password.touched && password.errors" class="errorMessage">
+                                    <span *ngIf="password.hasError('required')" style="color: red;"> Password is
+                                        required.</span>
+                                    <span *ngIf="password.hasError('maxlength')" style="color: red;"> Only 10 characters
+                                        allowed for password.</span>
+                                    <span *ngIf="password.hasError('minlength')" style="color: red;"> Atleast 5
+                                        characters needed for password.</span>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1"
+                                    formControlName="cpassword" required>
+                            </div>
+
+                            <div class="col-md-8">
+                                <div *ngIf="cpassword.touched && cpassword.errors" class="errorMessage">
+                                    <span *ngIf="cpassword.hasError('required')" style="color: red;"> Password is
+                                        required.</span>
+                                    <span *ngIf="cpassword.hasError('mustMatch')" style="color: red;"> Confirm password
+                                        must match.</span>
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary"
+                                    [disabled]="registerForm.invalid" (click)="registerSubmit(registerForm.value)">Submit</button>
+
+                                <p>Already have an account? <a routerLink="/login" href="#">Log in</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

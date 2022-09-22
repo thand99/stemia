@@ -1,0 +1,31 @@
+.home{
+    background-image:url('\src\assets\img\about.jpg') ;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+}
+section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+h1
+{
+    right: 50;
+}
+.mb-5 {
+    margin-bottom: 0rem!important;
+}
+
+.mt-5 {
+    margin-top: 0rem!important;
+}
+
+.col-lg-3 em
+{
+    color: rgb(149, 42, 21);
+}
+.P strong
+{
+    font-style: large;
+}
